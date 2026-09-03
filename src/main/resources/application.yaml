@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: rabbitmq-orders
+
+  RabbitMQ:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin123
+    virtual-host: /
+
+    listener:
+      simple:
+        acknowledge-mode: auto
+        prefetch: 10
+        concurrency: 1
